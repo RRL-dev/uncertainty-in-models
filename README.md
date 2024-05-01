@@ -129,42 +129,11 @@ Based on the membership degrees, you could have rules like:
 ```python
 # Dummy Python import for risk score calculation
 
-from __future__ import annotations
-from typing import Any
-import numpy as np
-from src.utils import LOGGER
+from src.modules import BaseRiskScore
 
-class BaseRiskScore:
-    def _low_risk(self, score: float) -> float:
-        return max(0, min(1, (0.3 - score) / 0.3))
-    def _medium_risk(self, score: float) -> float:
-        if score <= 0.2:
-            return 0
-        elif score <= 0.45:
-            return (score - 0.2) / 0.25
-        elif score <= 0.7:
-            return (0.7 - score) / 0.25
-        else:
-            return 0
-    def _high_risk(self, score: float) -> float:
-        return max(0, min(1, (score - 0.6) / 0.15))
-    def fit(self, probabilities: np.ndarray | float | int | list[float]) -> list[int]:
-        if isinstance(probabilities, (float, int)):
-            probabilities = [probabilities]
-        elif isinstance(probabilities, np.ndarray):
-            if probabilities.ndim > 1:
-                probabilities = probabilities[:, 1]
-            probabilities = probabilities.tolist()
-        risk_levels = []
-        for score in probabilities:
-            low = self._low_risk(score)
-            medium = self._medium_risk(score)
-            high = self._high_risk(score)
-            if high >= 0.5:
-                risk_levels.append(2)  # High Risk
-            elif medium >= low:
-                risk_levels.append(1)  # Medium Risk
-            else:
-                risk_levels.append(0)  # Low Risk
-        return risk_levels
-```
+risk_score_calculator = BaseRiskScore()
+
+single_risk: list[int] = risk_score_calculator.fit(probabilities=0.55)
+batch_risk: list[int] = risk_score_calculator.fit(
+    probabilities=np.array(object=[0.2, 0.4, 0.6, 0.8])
+)
