@@ -1,27 +1,25 @@
 
 <div align="center">
-  <img src="src/assets/risk_curve.png" alt="Model Calibration Curves" width="48%">
-  <img src="src/assets/reliability.png" alt="Reliability Diagram" width="48%">
+  <img src="src/assets/logo.png" alt="uim" width="48%">
 </div>
 
-# Churn Prediction System
+# Uncertainty in Machine Learning Models
 
 ## Introduction
-The Churn Prediction System is designed to help businesses reduce customer attrition by identifying customers likely to churn. This system uses machine learning models trained on historical data to predict churn probability weekly. The operators can then proactively engage these customers to improve retention rates.
+Machine learning models, despite their powerful capabilities, often come with inherent uncertainties. These uncertainties can arise due to various factors including, but not limited to, model assumptions, data quality, feature noise, and algorithmic limitations. Understanding and addressing these uncertainties is crucial for building robust and reliable predictive models, especially in critical applications like healthcare, finance, and autonomous driving.
 
 ## Features
 - **Model Calibration:** Ensures that the predicted probabilities of churn are realistic and actionable.
-- **Weekly Prediction Schedule:** Automatically selects N customers each week who are most likely to churn, based on the model's predictions.
 - **Operator Efficiency:** Optimizes the number of calls operators can make in a given week, maximizing the impact of customer interactions.
 
 ## Quick Start
 ### Prerequisites
-Ensure you have Python 3.8 or higher installed on your system. You can download it from [Python's official site](https://www.python.org/downloads/).
+Ensure you have Python 3.10 or higher installed on your system. You can download it from [Python's official site](https://www.python.org/downloads/).
 
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/RRL-dev/Churn-Prediction-System
+   git clone https://github.com/RRL-dev/uncertainty
    cd your-repository-directory
    ```
 
@@ -59,18 +57,13 @@ score: list[int] | ndarray[Any, dtype[Any]] = predictor.predict_proba(
 ## Documentation
 - **BaseTrainer:** Handles the training of the churn prediction model.
 - **BasePredictor:** Responsible for making weekly predictions using the trained model.
-- **Data Cleaning:** Scripts for preprocessing the data, handling missing values, and preparing the dataset for training.
-
-For detailed documentation, visit [Documentation](https://your-documentation-link.com).
-
-## Contributing
-Contributions are welcome! Please read our [Contributing Guide](https://github.com/RRL-dev/Churn-Prediction-System/CONTRIBUTING.md) for details on how to submit changes and for our code of conduct.
+- **BaseTransformer and DerivedFeaturesTransformer:** Scripts for preprocessing the data, handling missing values, and preparing the dataset for training.
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
-Project Link: [https://github.com/your-repository-link](https://github.com/your-repository-link)
+Project Link: [https://github.com/RRL-dev/uncertainty](https://github.com/RRL-dev/uncertainty)
 
 ## Resources
 - **Model Calibration Codebase from Apple:** [Apple ML Calibration](https://github.com/apple/ml-calibration/tree/main)
@@ -81,6 +74,10 @@ Detailed documentation on the main classes used within this project is as follow
 
 ### EstimatorWithCalibration
 This class integrates a classifier with a calibration mechanism using logistic regression to provide calibrated probability estimates.
+
+<div align="center">
+  <img src="src/assets/reliability.png" alt="Reliability Diagram" width="48%">
+</div>
 
 #### Methods
 - `__init__`: Initializes the EstimatorWithCalibration with a specific classifier.
@@ -107,6 +104,10 @@ This class encapsulates the training process of a model with configuration loade
 - `save_model`: Saves the trained model to the specified path in the configuration file.
 
 ## Risk Score Explanation and Methodology
+
+<div align="center">
+  <img src="src/assets/risk_curve.png" alt="Model Calibration Curves" width="48%">
+</div>
 
 ### Define Fuzzy Sets and Membership Functions
 Based on the calibrated probabilities, define three fuzzy sets:
