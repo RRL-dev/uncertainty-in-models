@@ -4,7 +4,7 @@ from typing import Any
 
 from yaml import safe_load
 
-from src.utils.path import suffix
+from uim.utils.path import suffix
 
 
 def load_yaml(file_path: str) -> Any | dict[Any, Any]:

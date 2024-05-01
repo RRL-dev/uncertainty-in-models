@@ -7,7 +7,7 @@ import numpy as np
 from pandas import Series
 from sklearn.metrics import log_loss
 
-from src.utils import LOGGER
+from uim.utils import LOGGER
 
 from .reliability import CalibrationReliability
 

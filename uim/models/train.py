@@ -8,10 +8,10 @@ import joblib
 from numpy import ndarray
 from pandas.core.series import Series
 
-from src.dataset import DerivedFeaturesTransformer
-from src.models import EstimatorWithCalibration
-from src.modules import split_train_calib_test
-from src.utils import DATASET_CFG, LOGGER, MODEL_CFG, set_global_seed
+from uim.dataset import DerivedFeaturesTransformer
+from uim.models import EstimatorWithCalibration
+from uim.modules import split_train_calib_test
+from uim.utils import DATASET_CFG, LOGGER, MODEL_CFG, set_global_seed
 
 if TYPE_CHECKING:
     from pandas import Series

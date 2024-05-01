@@ -8,14 +8,14 @@ import joblib
 from numpy import dtype, ndarray
 from pandas import Series
 
-from src.modules import BaseRiskScore, CalibrationVisualizer
-from src.utils import LOGGER, MODEL_CFG
+from uim.modules import BaseRiskScore, CalibrationVisualizer
+from uim.utils import LOGGER, MODEL_CFG
 
 if TYPE_CHECKING:
     import numpy as np
     from pandas import DataFrame
 
-    from src.engine import FittableClassifier
+    from uim.engine import FittableClassifier
 
 
 class BasePredictor(BaseRiskScore, CalibrationVisualizer):

@@ -19,7 +19,7 @@ Ensure you have Python 3.10 or higher installed on your system. You can download
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/RRL-dev/uncertainty
+   git clone https://github.com/RRL-dev/uncertainty-in-models
    cd your-repository-directory
    ```
 
@@ -63,7 +63,7 @@ score: list[int] | ndarray[Any, dtype[Any]] = predictor.predict_proba(
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
-Project Link: [https://github.com/RRL-dev/uncertainty](https://github.com/RRL-dev/uncertainty)
+Project Link: [https://github.com/RRL-dev/uncertainty-in-models](https://github.com/RRL-dev/uncertainty-in-models)
 
 ## Resources
 - **Model Calibration Codebase from Apple:** [Apple ML Calibration](https://github.com/apple/ml-calibration/tree/main)

@@ -2,7 +2,7 @@ from types import SimpleNamespace
 
 import pandas as pd
 
-from src.utils import DATASET_CFG, LOGGER
+from uim.utils import DATASET_CFG, LOGGER
 
 from .base import BaseTransformer
 

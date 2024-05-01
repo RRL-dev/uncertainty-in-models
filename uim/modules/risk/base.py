@@ -4,7 +4,7 @@ from typing import Any
 
 import numpy as np
 
-from src.utils import LOGGER
+from uim.utils import LOGGER
 
 
 class BaseRiskScore:

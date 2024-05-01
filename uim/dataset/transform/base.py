@@ -5,7 +5,7 @@ import pandas as pd
 from numpy import ndarray
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
-from src.utils import DATASET_CFG, LOGGER, read_file
+from uim.utils import DATASET_CFG, LOGGER, read_file
 
 
 class BaseTransformer:

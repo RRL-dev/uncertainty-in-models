@@ -44,7 +44,7 @@ requirements: list[str] = [
 
 if __name__ == "__main__":
     setup(
-        name="uncertainty",
+        name="uncertainty-in-models",
         version=VERSION,
         description="",
         author="Roni Reznik",

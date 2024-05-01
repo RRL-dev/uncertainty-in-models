@@ -8,8 +8,8 @@ from sklearn.base import BaseEstimator
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 
-from src.engine import FittableClassifier
-from src.utils import LOGGER, has_methods
+from uim.engine import FittableClassifier
+from uim.utils import LOGGER, has_methods
 
 
 class EstimatorWithCalibration(BaseEstimator):
