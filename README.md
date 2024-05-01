@@ -42,9 +42,12 @@ Ensure you have Python 3.8 or higher installed on your system. You can download 
    ```
 
 ### Usage
-To run the churn prediction model, execute the following command:
-```bash
-python run_churn_prediction.py
+To train the churn model, execute the following command:
+```python
+from src.models import BaseTrainer
+from src.utils import DATASET_CFG, LOGGER, MODEL_CFG
+    
+BaseTrainer(model_cfg=MODEL_CFG, data_cfg=DATASET_CFG).fit()
 ```
 
 ## Documentation
@@ -137,3 +140,4 @@ single_risk: list[int] = risk_score_calculator.fit(probabilities=0.55)
 batch_risk: list[int] = risk_score_calculator.fit(
     probabilities=np.array(object=[0.2, 0.4, 0.6, 0.8])
 )
+```
