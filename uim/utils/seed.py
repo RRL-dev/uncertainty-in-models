@@ -1,4 +1,4 @@
-"""Reproducibility utils for Deep learning."""
+"""Reproducibility utils for model learning."""
 
 from __future__ import annotations
 
@@ -16,10 +16,11 @@ logger: Logger = getLogger(name=__name__)
 
 
 def set_global_seed(seed: int) -> None:
-    """Set seed to enable reproducible result.
+    """
+    Set seed to enable reproducible result.
 
     Args:
-        seed (int): number of randomness block.
+        seed (int): Number of randomness block.
     """
     rnd_seed(a=seed)
     environ["PYTHONHASHSEED"] = str(object=seed)

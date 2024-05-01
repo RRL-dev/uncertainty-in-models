@@ -17,11 +17,12 @@ logger: Logger = getLogger()
 
 
 def read_file(file_path: str | None, file_format: str | None = "csv") -> DataFrame:
-    """Read tabular data.
+    """
+    Read tabular data.
 
     Args:
-        file_path (str): path of csv or xlsx file.
-        file_format (str): the file format, csv or xlsx. Defaults to 'csv'.
+        file_path (str): Path of csv or xlsx file.
+        file_format (str): The file format, csv or xlsx. Defaults to 'csv'.
 
     Returns:
         DataFrame: Two-dimensional, size-mutable, potentially heterogeneous tabular data

@@ -8,13 +8,14 @@ from uim.utils.path import suffix
 
 
 def load_yaml(file_path: str) -> Any | dict[Any, Any]:
-    """load_yaml as simple method to load a yaml file.
+    """
+    Load_yaml as simple method to load a yaml file.
 
     Args:
-        file (str): file path of yaml file.
+        file (str): File path of yaml file.
 
     Returns:
-        Any | dict[Any, Any]: dictionary of yaml file structure.
+        Any | dict[Any, Any]: Dictionary of yaml file structure.
     """
     assert suffix(name=file_path) == ".yaml", f"file {file_path} is not a yaml file"
 
