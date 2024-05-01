@@ -1,7 +1,7 @@
 
 <div align="center">
-  <img src="https://github.com/RRL-dev/Churn-Prediction-System/blob/main/src/assets/reliability.png" alt="Model Calibration Curves" width="48%">
-  <img src="https://github.com/RRL-dev/Churn-Prediction-System/blob/main/src/assets/reliability.png" alt="Reliability Diagram" width="48%">
+  <img src="src/assets/risk_curve.png" alt="Model Calibration Curves" width="48%">
+  <img src="src/assets/reliability.png" alt="Reliability Diagram" width="48%">
 </div>
 
 # Churn Prediction System
@@ -96,3 +96,75 @@ This class encapsulates the training process of a model with configuration loade
 - `fit`: Trains the model using parameters specified in the YAML configuration file and saves the trained model.
 - `fit_predict`: Fits the model and predicts on the test set.
 - `save_model`: Saves the trained model to the specified path in the configuration file.
+
+## Risk Score Explanation and Methodology
+
+### Define Fuzzy Sets and Membership Functions
+Based on the calibrated probabilities, define three fuzzy sets:
+- **Low Risk**: \( P < 0.3 \)
+- **Medium Risk**: \( 0.2 < P < 0.7 \)
+- **High Risk**: \( P > 0.6 \)
+
+#### Membership Functions:
+- **Low Risk**: Linear decrease from 1 at \( P=0 \) to 0 at \( P=0.3 \).
+- **Medium Risk**: Triangular shape, increasing from 0 at \( P=0.2 \) to 1 at \( P=0.45 \), then decreasing back to 0 at \( P=0.7 \).
+- **High Risk**: Sigmoid function starting to increase significantly at \( P=0.6 \) and reaching 1 at \( P=0.75 \).
+
+### Example Calculation of Membership Degrees
+Suppose a customer has a calibrated churn probability of 0.55. The membership degrees would be calculated as:
+- **Low Risk**: `max(0, (0.3 - 0.55) / (0.3 - 0)) = 0`
+- **Medium Risk**: Triangular shape peaks at 0.45, so:
+    - Increasing side: `(0.55 - 0.2) / (0.45 - 0.2) = 1.75` (not possible, hence it must be capped at 1)
+    - Decreasing side: `(0.7 - 0.55) / (0.7 - 0.45) = 0.75`
+    - The minimum of the two calculations: `min(1, 0.75) = 0.75`
+- **High Risk**: Using a simple linear approximation for the sigmoid around 0.6, assume linear from 0.6 to 0.75:
+    - `(0.55 - 0.6) / (0.75 - 0.6) = -0.33` (since it's below 0.6, it remains 0)
+
+### Fuzzy Logic Decision Making
+Based on the membership degrees, you could have rules like:
+- If **High Risk > 0.5** then initiate customer retention protocol.
+- If **Medium Risk > 0.5** then send promotional offers.
+- If **Low Risk > 0.5** then maintain normal engagement.
+
+```python
+# Dummy Python import for risk score calculation
+
+from __future__ import annotations
+from typing import Any
+import numpy as np
+from src.utils import LOGGER
+
+class BaseRiskScore:
+    def _low_risk(self, score: float) -> float:
+        return max(0, min(1, (0.3 - score) / 0.3))
+    def _medium_risk(self, score: float) -> float:
+        if score <= 0.2:
+            return 0
+        elif score <= 0.45:
+            return (score - 0.2) / 0.25
+        elif score <= 0.7:
+            return (0.7 - score) / 0.25
+        else:
+            return 0
+    def _high_risk(self, score: float) -> float:
+        return max(0, min(1, (score - 0.6) / 0.15))
+    def fit(self, probabilities: np.ndarray | float | int | list[float]) -> list[int]:
+        if isinstance(probabilities, (float, int)):
+            probabilities = [probabilities]
+        elif isinstance(probabilities, np.ndarray):
+            if probabilities.ndim > 1:
+                probabilities = probabilities[:, 1]
+            probabilities = probabilities.tolist()
+        risk_levels = []
+        for score in probabilities:
+            low = self._low_risk(score)
+            medium = self._medium_risk(score)
+            high = self._high_risk(score)
+            if high >= 0.5:
+                risk_levels.append(2)  # High Risk
+            elif medium >= low:
+                risk_levels.append(1)  # Medium Risk
+            else:
+                risk_levels.append(0)  # Low Risk
+        return risk_levels
+```
