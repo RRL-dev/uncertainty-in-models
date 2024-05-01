@@ -1,7 +1,7 @@
 
 <div align="center">
-  <img src="src/assets/reliability.png" alt="Model Calibration Curves" width="48%">
-  <img src="src/assets/risk_curve.png" alt="Reliability Diagram" width="48%">
+  <img src="risk_curve.png" alt="Model Calibration Curves" width="48%">
+  <img src="reliability.png" alt="Reliability Diagram" width="48%">
 </div>
 
 # Churn Prediction System
@@ -21,7 +21,7 @@ Ensure you have Python 3.8 or higher installed on your system. You can download 
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone https://your-repository-link.com
+   git clone https://github.com/RRL-dev/Churn-Prediction-System
    cd your-repository-directory
    ```
 
@@ -55,10 +55,14 @@ python run_churn_prediction.py
 For detailed documentation, visit [Documentation](https://your-documentation-link.com).
 
 ## Contributing
-Contributions are welcome! Please read our [Contributing Guide](https://your-repository-link.com/CONTRIBUTING.md) for details on how to submit changes and for our code of conduct.
+Contributions are welcome! Please read our [Contributing Guide](https://github.com/RRL-dev/Churn-Prediction-System/CONTRIBUTING.md) for details on how to submit changes and for our code of conduct.
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 Project Link: [https://github.com/your-repository-link](https://github.com/your-repository-link)
+
+## Resources
+- **Model Calibration Codebase from Apple:** [Apple ML Calibration](https://github.com/apple/ml-calibration/tree/main)
+- **Temperature Scaling Resource:** [Temperature Scaling by Geoff Pleiss](https://github.com/gpleiss/temperature_scaling)
