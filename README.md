@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="src/assets/logo.png" alt="uim" width="48%">
+  <img src="uim/assets/logo.png" alt="uim" width="48%">
 </div>
 
 # Uncertainty in Machine Learning Models
@@ -76,7 +76,7 @@ Detailed documentation on the main classes used within this project is as follow
 This class integrates a classifier with a calibration mechanism using logistic regression to provide calibrated probability estimates.
 
 <div align="center">
-  <img src="src/assets/reliability.png" alt="Reliability Diagram" width="48%">
+  <img src="uim/assets/reliability.png" alt="Reliability Diagram" width="48%">
 </div>
 
 #### Methods
@@ -106,7 +106,7 @@ This class encapsulates the training process of a model with configuration loade
 ## Risk Score Explanation and Methodology
 
 <div align="center">
-  <img src="src/assets/risk_curve.png" alt="Model Calibration Curves" width="48%">
+  <img src="uim/assets/risk_curve.png" alt="Model Calibration Curves" width="48%">
 </div>
 
 ### Define Fuzzy Sets and Membership Functions
