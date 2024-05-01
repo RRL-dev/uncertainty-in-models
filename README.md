@@ -1,7 +1,7 @@
 
 <div align="center">
-  <img src="risk_curve.png" alt="Model Calibration Curves" width="48%">
-  <img src="reliability.png" alt="Reliability Diagram" width="48%">
+  <img src="https://github.com/RRL-dev/Churn-Prediction-System/blob/main/src/assets/reliability.png" alt="Model Calibration Curves" width="48%">
+  <img src="https://github.com/RRL-dev/Churn-Prediction-System/blob/main/src/assets/reliability.png" alt="Reliability Diagram" width="48%">
 </div>
 
 # Churn Prediction System
