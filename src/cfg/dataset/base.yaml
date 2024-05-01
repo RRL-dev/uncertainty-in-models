@@ -1,0 +1,58 @@
+data:
+  file_path: 'resources/data/data_scientist_home_assignment.csv'
+  file_format: 'csv'
+
+features:
+  EffectiveDate:
+    type: datetime
+    format: "%Y-%m-%d"
+    description: "Converts the date string to a datetime object for possible time series analysis."
+
+  Gender:
+    type: categorical
+    encoding: onehot
+    description: "One-hot encode to transform categorical gender data into numerical format, which is necessary for machine learning models."
+    missing: "mode"  # Impute missing values using the mode of the column
+
+  DEXAScanResult:
+    type: categorical
+    encoding: onehot
+    description: "One-hot encode to allow model to easily interpret these categorical results as features."
+
+  OutReachOutcome:
+    type: categorical
+    encoding: onehot
+    missing: "mode"  # Specifies the imputation method for missing values
+    description: "Encode with one-hot and fill missing values with the mode."
+
+  Height:
+    type: numerical
+    description: "Directly used as a numerical feature without transformation."
+    missing: "mean"  # Impute missing values using the mean of the column
+
+  Weight:
+    type: numerical
+    description: "Directly used as a numerical feature without transformation."
+    missing: "mean"  # Impute missing values using the mean of the column
+
+  BMI:
+    type: numerical
+    derived_from: ["Weight", "Height"]
+    calculation: "Weight / (Height / 100) ** 2"
+    description: "Calculate BMI from height and weight to use as a health indicator."
+
+  GymVisitTrend_2W_6W:
+    type: numerical
+    derived_from: ["GymVisitsLast2W", "GymVisitsLast6W"]
+    calculation: "GymVisitsLast2W - GymVisitsLast6W / 3"
+    description: "Calculate the trend in gym visits to see if there is an increasing or decreasing pattern in recent activity."
+
+  EngagementScore:
+    type: numerical
+    derived_from: ["AppUsage", "GymVisitsLast2W", "GymVisitsLast6W", "GymVisitsLast12W"]
+    calculation: "AppUsage * 0.4 + GymVisitsLast2W * 0.2 + GymVisitsLast6W * 0.2 + GymVisitsLast12W * 0.2"
+    description: "Compute the Engagement Score as a weighted sum of AppUsage, GymVisitsLast2W, GymVisitsLast6W, and GymVisitsLast12W."
+
+  target:
+    type: label
+    name: ChurnThisWeek
