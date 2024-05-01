@@ -31,12 +31,7 @@ Ensure you have Python 3.8 or higher installed on your system. You can download 
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-3. **Install the required packages:**
-   ```bash
-   pip install numpy pandas scikit-learn matplotlib
-   ```
-
-4. **Install the project package:**
+3. **Install the project package:**
    ```bash
    pip install -e .
    ```
@@ -45,9 +40,20 @@ Ensure you have Python 3.8 or higher installed on your system. You can download 
 To train the churn model, execute the following command:
 ```python
 from src.models import BaseTrainer
-from src.utils import DATASET_CFG, LOGGER, MODEL_CFG
+from src.utils import DATASET_CFG, MODEL_CFG
     
 BaseTrainer(model_cfg=MODEL_CFG, data_cfg=DATASET_CFG).fit()
+```
+
+To run the churn model, execute the following command:
+```python
+from src.models import BasePredictor
+from src.utils import MODEL_CFG
+    
+predictor = BasePredictor(model_cfg=MODEL_CFG)
+score: list[int] | ndarray[Any, dtype[Any]] = predictor.predict_proba(
+   X=predictor.samples
+)
 ```
 
 ## Documentation
