@@ -37,17 +37,17 @@ Ensure you have Python 3.10 or higher installed on your system. You can download
 ### Usage
 To train the churn model, execute the following command:
 ```python
-from src.models import BaseTrainer
-from src.utils import DATASET_CFG, MODEL_CFG
+from uim.models import BaseTrainer
+from uim.utils import DATASET_CFG, MODEL_CFG
     
 BaseTrainer(model_cfg=MODEL_CFG, data_cfg=DATASET_CFG).fit()
 ```
 
 To run the churn model, execute the following command:
 ```python
-from src.models import BasePredictor
-from src.utils import MODEL_CFG
-    
+from uim.models import BasePredictor
+from uim.utils import MODEL_CFG
+
 predictor = BasePredictor(model_cfg=MODEL_CFG)
 score: list[int] | ndarray[Any, dtype[Any]] = predictor.predict_proba(
    X=predictor.samples
@@ -139,7 +139,7 @@ Based on the membership degrees, you could have rules like:
 ```python
 # Dummy Python import for risk score calculation
 
-from src.modules import BaseRiskScore
+from uim.modules import BaseRiskScore
 
 risk_score_calculator = BaseRiskScore()
 
