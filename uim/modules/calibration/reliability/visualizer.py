@@ -9,12 +9,11 @@ from sklearn.metrics import log_loss
 
 from uim.utils import LOGGER
 
-from .reliability import CalibrationReliability
+from .base import CalibrationReliability
 
 if TYPE_CHECKING:
     from matplotlib.axes import Axes
     from matplotlib.container import BarContainer
-    from matplotlib.figure import Figure
 
 
 class CalibrationVisualizer(CalibrationReliability):
@@ -34,9 +33,8 @@ class CalibrationVisualizer(CalibrationReliability):
             bin_data (dict): Data dictionary containing binning results from calibration computations.
         """
         ax: Axes
-        fig: Figure
 
-        fig, ax = plt.subplots(figsize=(8, 8))
+        _, ax = plt.subplots(figsize=(8, 8))
         self._reliability_diagram_subplot(ax=ax, bin_data=bin_data)
         plt.show()
 
@@ -108,17 +106,17 @@ class CalibrationVisualizer(CalibrationReliability):
         predicted probabilities exactly match the observed frequencies.
         """
         bins: np.ndarray = bin_data["bins"]
-        counts: np.ndarray = bin_data["counts"]
-        confidences: np.ndarray = bin_data["confidences"]
-        accuracies: np.ndarray = bin_data["accuracies"]
+        counts: np.ndarray = bin_data["bin_counts"]
+        accuracies: np.ndarray = bin_data["bin_accuracies"]
+        confidences: np.ndarray = bin_data["bin_confidences"]
 
         bin_size: float = 1.0 / len(counts)
-        positions: np.ndarray = bins[:-1] + bin_size / 2.0
+        positions: np.ndarray = bins + bin_size / 2.0
 
         widths: float = bin_size
         alphas = 0.3  # Default alpha transparency for bars
-        min_count: np.float64 = np.min(counts)
-        max_count: np.float64 = np.max(counts)
+        min_count: np.float64 = np.min(a=counts)
+        max_count: np.float64 = np.max(a=counts)
         normalized_counts: np.ndarray = (counts - min_count) / (max_count - min_count)
 
         if draw_bin_importance == "alpha":
