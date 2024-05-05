@@ -26,7 +26,7 @@ class CalibrationVisualizer(CalibrationReliability):
         estimator (EstimatorWithCalibration): An instance of a calibrated estimator.
     """
 
-    def plot_reliability_diagram(self, bin_data):
+    def plot_reliability_diagram(self, bin_data) -> None:
         """
         Plots a reliability diagram based on calibration data.
 

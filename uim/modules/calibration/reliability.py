@@ -54,7 +54,7 @@ class CalibrationReliability:
         )
         bin_accuracies: np.ndarray[Any, np.dtype[Any]] = np.array(
             object=[
-                np.mean(targets[digitized == i] == pred_labels[digitized == i])
+                np.mean(a=targets[digitized == i] == pred_labels[digitized == i])
                 if bin_counts[i] > 0
                 else 0
                 for i in range(num_bins)
