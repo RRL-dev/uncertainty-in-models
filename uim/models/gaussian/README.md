@@ -44,10 +44,15 @@ $$
 \end{pmatrix}
 ```
 
-
-<p align="center">The conditional distribution of \( \mathbf{x}_a \) given \( \mathbf{x}_b = \mathbf{b} \) is:</p>
+<p align="center">The conditional distribution of $( \mathbf{x}_a ) given $( \mathbf{x}_b = \mathbf{b} )$ is:</p>
 <p align="center">
 
 ```math
 \mathbf{x}_a \mid \mathbf{x}_b = \mathbf{b} \sim \mathcal{N}(\boldsymbol{\mu}_{a \mid b}, \boldsymbol{\Sigma}_{a \mid b})
+```
+
+<p align="center">where</p>
+
+```math
+\boldsymbol{\Sigma}_{a \mid b} = \boldsymbol{\Sigma}_{aa} - \boldsymbol{\Sigma}_{ab} \boldsymbol{\Sigma}_{bb}^{-1} \boldsymbol{\Sigma}_{ba}
 ```
