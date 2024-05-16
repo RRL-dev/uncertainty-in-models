@@ -28,7 +28,7 @@ $$
 
 <p align="center">Given a multivariate normal distribution \( \mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}) \), we can partition \( \mathbf{x} \), \( \boldsymbol{\mu} \), and \( \boldsymbol{\Sigma} \) as follows:</p>
 
-<p align="center">
+
 ```math
 \mathbf{x} = \begin{pmatrix} 
 \mathbf{x}_a \\ 
@@ -43,7 +43,6 @@ $$
 \boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
 \end{pmatrix}
 ```
-</p>
 
 
 <p align="center">The conditional distribution of \( \mathbf{x}_a \) given \( \mathbf{x}_b = \mathbf{b} \) is:</p>
