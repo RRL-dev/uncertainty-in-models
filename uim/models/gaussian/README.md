@@ -94,7 +94,7 @@ $$
 
 ```bash
 python scripts/2d_gaussian_index.py
+python scripts/5d_gaussian_index.py
 python scripts/5d_condition_index.py
-python scripts/5d_condition_distribution.py
 python scripts/5d_condition_distribution.py
 ```
