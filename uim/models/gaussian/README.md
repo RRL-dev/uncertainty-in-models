@@ -44,7 +44,7 @@ $$
 \end{pmatrix}
 ```
 
-<p align="center">The conditional distribution of $( \mathbf{x}_a ) given $( \mathbf{x}_b = \mathbf{b} )$ is:</p>
+<p align="center">The conditional distribution of $( \mathbf{x}_a )$ given $( \mathbf{x}_b = \mathbf{b} )$ is:</p>
 <p align="center">
 
 ```math
