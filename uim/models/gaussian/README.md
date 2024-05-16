@@ -50,25 +50,19 @@ Given a multivariate normal distribution $\( \mathbf{x} \sim \mathcal{N}(\boldsy
 
 The conditional distribution of $(\mathbf{x}_a)$ given $(\mathbf{x}_b = \mathbf{b})$ is:
 
-$$
+```math
 \mathbf{x}_a \mid \mathbf{x}_b = \mathbf{b} \sim \mathcal{N}(\boldsymbol{\mu}_{a \mid b}, \boldsymbol{\Sigma}_{a \mid b})
-$$
-
+```
 
 where
 
-
-$$
+```math
 \boldsymbol{\mu}_{a \mid b} = \boldsymbol{\mu}_a + \boldsymbol{\Sigma}_{ab} \boldsymbol{\Sigma}_{bb}^{-1} (\mathbf{b} - \boldsymbol{\mu}_b)
-$$
+```
 
-
-
-$$
+```math
 \boldsymbol{\Sigma}_{a \mid b} = \boldsymbol{\Sigma}_{aa} - \boldsymbol{\Sigma}_{ab} \boldsymbol{\Sigma}_{bb}^{-1} \boldsymbol{\Sigma}_{ba}
-$$
-
-
+```
 
 ## Visualizations
 
