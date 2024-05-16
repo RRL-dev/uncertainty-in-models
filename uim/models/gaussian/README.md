@@ -34,29 +34,19 @@ Given a multivariate normal distribution $\( \mathbf{x} \sim \mathcal{N}(\boldsy
 
 $$
 \mathbf{x} = \begin{bmatrix} 
-
 \mathbf{x}_a \\ 
-
 \mathbf{x}_b 
-
 \end{bmatrix}, \quad 
-
 \boldsymbol{\mu} = \begin{bmatrix} 
-
 \boldsymbol{\mu}_a \\ 
-
 \boldsymbol{\mu}_b 
-
 \end{bmatrix}, \quad 
-
 \boldsymbol{\Sigma} = \begin{bmatrix} 
-
 \boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab} \\ 
-
 \boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
-
 \end{bmatrix}
 $$
+
 
 
 The conditional distribution of $(\mathbf{x}_a)$ given $(\mathbf{x}_b = \mathbf{b})$ is:
