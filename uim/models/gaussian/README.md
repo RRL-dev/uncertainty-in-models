@@ -54,5 +54,14 @@ $$
 <p align="center">where</p>
 
 ```math
+\boldsymbol{\mu}_{a \mid b} = \boldsymbol{\mu}_a + \boldsymbol{\Sigma}_{ab} \boldsymbol{\Sigma}_{bb}^{-1} (\mathbf{b} - \boldsymbol{\mu}_b)
+```
+
+```math
 \boldsymbol{\Sigma}_{a \mid b} = \boldsymbol{\Sigma}_{aa} - \boldsymbol{\Sigma}_{ab} \boldsymbol{\Sigma}_{bb}^{-1} \boldsymbol{\Sigma}_{ba}
 ```
+
+</p>
+<h2 align="center">Visualizations</h2>
+<h3 align="center">2D Gaussian Distribution</h3>
+<p align="center"><img width="100%" src="https://github.com/RRL-dev/uncertainty-in-models/blob/main/uim/assets/2d_gaussian_index.png?raw=true" alt="2D Gaussian Distribution"></p>
