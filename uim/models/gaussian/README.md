@@ -13,7 +13,7 @@ The repository includes:
 
 ### Gaussian Distribution
 
-A multivariate Gaussian distribution is defined by its mean vector $$(\boldsymbol{\mu})$$ and covariance matrix \\( \\boldsymbol{\\Sigma} \\). The probability density function (PDF) is given by:
+A multivariate Gaussian distribution is defined by its mean vector $(\boldsymbol{\mu})$ and covariance matrix \\( \\boldsymbol{\\Sigma} \\). The probability density function (PDF) is given by:
 
 
 $$
