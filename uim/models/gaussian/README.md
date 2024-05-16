@@ -61,6 +61,7 @@ $$
 \boldsymbol{\Sigma}_{a \mid b} = \boldsymbol{\Sigma}_{aa} - \boldsymbol{\Sigma}_{ab} \boldsymbol{\Sigma}_{bb}^{-1} \boldsymbol{\Sigma}_{ba}
 ```
 
+
 </p>
 <h2 align="center">Visualizations</h2>
 <h3 align="center">2D Gaussian Distribution</h3>
