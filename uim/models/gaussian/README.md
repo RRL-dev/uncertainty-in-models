@@ -1,36 +1,16 @@
-# Uncertainty in Models: Gaussian Distribution and Conditional Distribution Visualization
-
-This repository focuses on visualizing uncertainty in models through multivariate Gaussian distributions, conditional distributions, and their sampled points. These visualizations help in understanding how uncertainties propagate and are conditioned within Gaussian processes.
-
-
-## Overview
-
-The repository includes:
-
-- Visualization of 2D and 5D Gaussian distributions.
-
-- Visualization of conditional distributions $(p(x_1 \mid x_2, x_3, x_4, x_5))$ and $(p(x_2, x_3, x_4, x_5 \mid x_1))$.
-
-- Sampled points from these distributions and their representation as functions of variable indices.
-
-
 ## Mathematical Background
 
 ### Gaussian Distribution
 
-A multivariate Gaussian distribution is defined by its mean vector $\( \boldsymbol{\mu} \)$ and covariance matrix $\( \boldsymbol{\Sigma} \)$. The probability density function (PDF) is given by:
-
+A multivariate Gaussian distribution is defined by its mean vector \( \boldsymbol{\mu} \) and covariance matrix \( \boldsymbol{\Sigma} \). The probability density function (PDF) is given by:
 
 $$
 f(\mathbf{x}) = \frac{1}{(2\pi)^{k/2} |\boldsymbol{\Sigma}|^{1/2}} \exp \left( -\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^T \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu}) \right)
 $$
 
-
 ### Conditional Distribution
 
-
-Given a multivariate normal distribution $\( \mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}) \)$, we can partition $\( \mathbf{x} \), \( \boldsymbol{\mu} \)$, and $\( \boldsymbol{\Sigma} \)$ as follows:
-
+Given a multivariate normal distribution \( \mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}) \), we can partition \( \mathbf{x} \), \( \boldsymbol{\mu} \), and \( \boldsymbol{\Sigma} \) as follows:
 
 $$
 \mathbf{x} = \begin{pmatrix} 
@@ -45,6 +25,22 @@ $$
 \boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab} \\ 
 \boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
 \end{pmatrix}
+$$
+
+The conditional distribution of \( \mathbf{x}_a \) given \( \mathbf{x}_b = \mathbf{b} \) is:
+
+$$
+\mathbf{x}_a \mid \mathbf{x}_b = \mathbf{b} \sim \mathcal{N}(\boldsymbol{\mu}_{a \mid b}, \boldsymbol{\Sigma}_{a \mid b})
+$$
+
+where
+
+$$
+\boldsymbol{\mu}_{a \mid b} = \boldsymbol{\mu}_a + \boldsymbol{\Sigma}_{ab} \boldsymbol{\Sigma}_{bb}^{-1} (\mathbf{b} - \boldsymbol{\mu}_b)
+$$
+
+$$
+\boldsymbol{\Sigma}_{a \mid b} = \boldsymbol{\Sigma}_{aa} - \boldsymbol{\Sigma}_{ab} \boldsymbol{\Sigma}_{bb}^{-1} \boldsymbol{\Sigma}_{ba}
 $$
 
 <!-- 
