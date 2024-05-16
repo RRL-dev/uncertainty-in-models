@@ -1,9 +1,8 @@
-# Uncertainty in Models: Gaussian Distribution and Conditional Distribution Visualization
+<h1 align="center">Uncertainty in Models: Gaussian Distribution and Conditional Distribution Visualization</h1>
 
-This repository focuses on visualizing uncertainty in models through multivariate Gaussian distributions, conditional distributions, and their sampled points. These visualizations help in understanding how uncertainties propagate and are conditioned within Gaussian processes.
+<p align="center">This repository focuses on visualizing uncertainty in models through multivariate Gaussian distributions, conditional distributions, and their sampled points. These visualizations help in understanding how uncertainties propagate and are conditioned within Gaussian processes.</p>
 
-
-## Overview
+<p align="center">The repository includes:</p>
 
 The repository includes:
 
