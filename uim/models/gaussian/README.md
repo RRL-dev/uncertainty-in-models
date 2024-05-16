@@ -68,6 +68,9 @@ where
 
 
 ### 2D Gaussian Distribution
+!["2D Gaussian Distribution"](https://github.com/[RRL-dev]/[uncertainty-in-models]/blob/[main]/uim/assets/2d_gaussian_index.png?raw=true)
+
+https://github.com/RRL-dev/uncertainty-in-models/tree/main/uim/models/gaussian
 
 This plot visualizes a 2D Gaussian distribution along with a sampled point. The sampled point is highlighted in red, and the values are shown as functions of their variable indices.
 
