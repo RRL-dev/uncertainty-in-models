@@ -73,14 +73,17 @@ where
 This plot visualizes a 2D Gaussian distribution along with a sampled point. The sampled point is highlighted in red, and the values are shown as functions of their variable indices.
 
 ### 5D Gaussian Distribution
+<img width="100%" src="https://github.com/RRL-dev/uncertainty-in-models/blob/main/uim/assets/5d_gaussian_index.png?raw=true" alt="5D Gaussian Distribution">
 
 This plot visualizes a 5D Gaussian distribution along with a sampled point. The sampled point is highlighted in red, and the values are shown as functions of their variable indices.
 
 ### Conditional Distribution $(p(x_1 \mid x_2, x_3, x_4, x_5))$
+<img width="100%" src="https://github.com/RRL-dev/uncertainty-in-models/blob/main/uim/assets/conditional_distribution.png?raw=true" alt="Conditional Distribution">
 
 This plot visualizes the conditional distribution $(p(x_1 \mid x_2, x_3, x_4, x_5))$. The left plot shows the bivariate distribution of $(x_1)$ and $(x_5)$ with the sampled point highlighted in red. The right plot shows the conditional distribution as a function of $(x_1)$.
 
 ### Conditional Distribution $(p(x_2, x_3, x_4, x_5 \mid x_1))$
+<img width="100%" src="https://github.com/RRL-dev/uncertainty-in-models/blob/main/uim/assets/conditional_distribution_index.png?raw=true" alt="Conditional Distribution Index">
 
 This plot visualizes the conditional distribution $(p(x_2, x_3, x_4, x_5 \mid x_1))$ given a sampled value for $( x_1)$. The left plot shows the bivariate distribution of $(x_1)$ and $(x_5)$ with the sampled point highlighted in red. The right plot shows the values of the sampled point as a function of their variable indices, with $(x_1)$ highlighted as a red point.
 
