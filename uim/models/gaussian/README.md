@@ -42,6 +42,7 @@ $$
 \boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab} \\ 
 \boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
 \end{pmatrix}
+```
 </p>
 
 
