@@ -33,21 +33,21 @@ Given a multivariate normal distribution $\( \mathbf{x} \sim \mathcal{N}(\boldsy
 
 
 $$
-\mathbf{x} = \begin{bmatrix} 
+\mathbf{x} = \begin{pmatrix} 
 \mathbf{x}_a \\ 
 \mathbf{x}_b 
-\end{bmatrix}, \quad 
-\boldsymbol{\mu} = \begin{bmatrix} 
+\end{pmatrix}, \quad 
+\boldsymbol{\mu} = \begin{pmatrix} 
 \boldsymbol{\mu}_a \\ 
 \boldsymbol{\mu}_b 
-\end{bmatrix}, \quad 
-\boldsymbol{\Sigma} = \begin{bmatrix} 
+\end{pmatrix}, \quad 
+\boldsymbol{\Sigma} = \begin{pmatrix} 
 \boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab} \\ 
 \boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
-\end{bmatrix}
+\end{pmatrix}
 $$
 
-
+<!-- 
 
 The conditional distribution of $(\mathbf{x}_a)$ given $(\mathbf{x}_b = \mathbf{b})$ is:
 
@@ -99,4 +99,4 @@ To run the script and visualize the distributions, simply execute the Python scr
 
 python scripts/2d_gaussian_index.py
 
-python scripts/5d_condition_distribution.py
+python scripts/5d_condition_distribution.py -->
