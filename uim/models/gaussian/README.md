@@ -22,7 +22,7 @@ $$
 
 ### Conditional Distribution
 
-Given a multivariate normal distribution $\\( \\mathbf{x} \\sim \\mathcal{N}(\\boldsymbol{\\mu}, \\boldsymbol{\\Sigma}) \\)$, we can partition \\( \\mathbf{x} \\), \\( \\boldsymbol{\\mu} \\), and \\( \\boldsymbol{\\Sigma} \\) as follows:
+Given a multivariate normal distribution $(\\mathbf{x} \\sim \\mathcal{N}(\\boldsymbol{\\mu}, \\boldsymbol{\\Sigma}))$, we can partition $(\\mathbf{x}), (\\boldsymbol{\\mu})$, and $( \\boldsymbol{\\Sigma})$ as follows:
 
 $$
 \\mathbf{x} = \\begin{bmatrix} 
