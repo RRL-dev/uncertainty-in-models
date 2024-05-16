@@ -91,10 +91,6 @@ $$
 
 This plot visualizes a 2D Gaussian distribution along with a sampled point. The sampled point is highlighted in red, and the values are shown as functions of their variable indices.
 
-![2D Gaussian Distribution](uim/assets/2d_gaussian_index.png)
-
-
-
 ### 5D Gaussian Distribution
 
 This plot visualizes a 5D Gaussian distribution along with a sampled point. The sampled point is highlighted in red, and the values are shown as functions of their variable indices.
