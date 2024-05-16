@@ -42,3 +42,9 @@ $$
 \boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab} \\ 
 \boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
 \end{pmatrix}
+</p>
+
+
+<p align="center">The conditional distribution of \( \mathbf{x}_a \) given \( \mathbf{x}_b = \mathbf{b} \) is:</p>
+<p align="center">
+
