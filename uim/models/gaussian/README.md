@@ -92,3 +92,9 @@ $$
 <h2 align="center">Usage</h2>
 <p align="center">To run the script and visualize the distributions, simply execute the Python scripts located in the `scripts` folder:</p>
 
+```bash
+python scripts/2d_gaussian_index.py
+python scripts/5d_condition_index.py
+python scripts/5d_condition_distribution.py
+python scripts/5d_condition_distribution.py
+```
