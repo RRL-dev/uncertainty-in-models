@@ -42,7 +42,7 @@ $$
 The conditional distribution of $(\mathbf{x}_a)$ given $(\mathbf{x}_b = \mathbf{b})$ is:
 
 $$
-mathbf{x}_a | \\mathbf{x}_b = \\mathbf{b} \\sim \\mathcal{N}(\\boldsymbol{\\mu}_{a|b}, \\boldsymbol{\\Sigma}_{a|b})
+\mathbf{x}_a | \\mathbf{x}_b = \\mathbf{b} \\sim \\mathcal{N}(\\boldsymbol{\\mu}_{a|b}, \\boldsymbol{\\Sigma}_{a|b})
 $$
 
 where
