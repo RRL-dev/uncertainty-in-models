@@ -26,7 +26,7 @@ $$
 
 <h3 align="center">Conditional Distribution</h3>
 
-<p align="center">Given a multivariate normal distribution \( \mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}) \), we can partition \( \mathbf{x} \), \( \boldsymbol{\mu} \), and \( \boldsymbol{\Sigma} \) as follows:</p>
+<p align="center">Given a multivariate normal distribution $( \mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}) )$, we can partition $( \mathbf{x} \), \( \boldsymbol{\mu} )$, and $( \boldsymbol{\Sigma} )$ as follows:</p>
 
 
 ```math
