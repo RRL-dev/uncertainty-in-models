@@ -13,7 +13,7 @@ The repository includes:
 
 ### Gaussian Distribution
 
-A multivariate Gaussian distribution is defined by its mean vector $(\boldsymbol{\mu})$ and covariance matrix $(\\boldsymbol{\\Sigma})$. The probability density function (PDF) is given by:
+A multivariate Gaussian distribution is defined by its mean vector $(\\boldsymbol{\mu})$ and covariance matrix $(\\boldsymbol{\\Sigma})$. The probability density function (PDF) is given by:
 
 
 $$
@@ -22,7 +22,7 @@ $$
 
 ### Conditional Distribution
 
-Given a multivariate normal distribution \\( \\mathbf{x} \\sim \\mathcal{N}(\\boldsymbol{\\mu}, \\boldsymbol{\\Sigma}) \\), we can partition \\( \\mathbf{x} \\), \\( \\boldsymbol{\\mu} \\), and \\( \\boldsymbol{\\Sigma} \\) as follows:
+Given a multivariate normal distribution $\\( \\mathbf{x} \\sim \\mathcal{N}(\\boldsymbol{\\mu}, \\boldsymbol{\\Sigma}) \\)$, we can partition \\( \\mathbf{x} \\), \\( \\boldsymbol{\\mu} \\), and \\( \\boldsymbol{\\Sigma} \\) as follows:
 
 $$
 \\mathbf{x} = \\begin{bmatrix} 
