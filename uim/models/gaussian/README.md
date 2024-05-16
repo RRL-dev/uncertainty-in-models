@@ -25,7 +25,7 @@ $$
 Given a multivariate normal distribution $(\\mathbf{x} \\sim \\mathcal{N}(\\boldsymbol{\\mu}, \\boldsymbol{\\Sigma}))$, we can partition $(\\mathbf{x}), (\\boldsymbol{\\mu})$, and $( \\boldsymbol{\\Sigma})$ as follows:
 
 $$
-\\mathbf{x} = \\begin{bmatrix} 
+f(\\mathbf{x} = \\begin{bmatrix} 
 \\mathbf{x}_a \\\\ 
 \\mathbf{x}_b 
 \\end{bmatrix}, \\quad 
@@ -36,7 +36,7 @@ $$
 \\boldsymbol{\\Sigma} = \\begin{bmatrix} 
 \\boldsymbol{\\Sigma}_{aa} & \\boldsymbol{\\Sigma}_{ab} \\\\ 
 \\boldsymbol{\\Sigma}_{ba} & \\boldsymbol{\\Sigma}_{bb} 
-\\end{bmatrix}
+\\end{bmatrix})
 $$
 
 The conditional distribution of \\( \\mathbf{x}_a \\) given \\( \\mathbf{x}_b = \\mathbf{b} \\) is:
