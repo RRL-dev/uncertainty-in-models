@@ -8,7 +8,7 @@
 
 <ul align="center">
   <li>Visualization of 2D and 5D Gaussian distributions.</li>
-  <li>Visualization of conditional distributions \( p(x_1 \mid x_2, x_3, x_4, x_5) \) and \( p(x_2, x_3, x_4, x_5 \mid x_1) \).</li>
+  <li>Visualization of conditional distributions $( p(x_1 \mid x_2, x_3, x_4, x_5) )$ and $( p(x_2, x_3, x_4, x_5 \mid x_1) )$.</li>
   <li>Sampled points from these distributions and their representation as functions of variable indices.</li>
 </ul>
 
@@ -64,5 +64,15 @@ $$
 
 </p>
 <h2 align="center">Visualizations</h2>
+</p>
+
 <h3 align="center">2D Gaussian Distribution</h3>
 <p align="center"><img width="100%" src="https://github.com/RRL-dev/uncertainty-in-models/blob/main/uim/assets/2d_gaussian_index.png?raw=true" alt="2D Gaussian Distribution"></p>
+<p align="center">This plot visualizes a 2D Gaussian distribution along with a sampled point. The sampled point is highlighted in red, and the values are shown as functions of their variable indices.
+</p>
+
+
+<h3 align="center">5D Gaussian Distribution</h3>
+<p align="center"><img width="100%" src="https://github.com/RRL-dev/uncertainty-in-models/blob/main/uim/assets/5d_gaussian_index.png?raw=true" alt="5D Gaussian Distribution"></p>
+<p align="center">This plot visualizes a 5D Gaussian distribution along with a sampled point. The sampled point is highlighted in red, and the values are shown as functions of their variable indices.</p>
+
