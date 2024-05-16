@@ -85,3 +85,10 @@ $$
 <h3 align="center">Conditional Distribution $( p(x_2, x_3, x_4, x_5 \mid x_1) )$</h3>
 <p align="center"><img width="100%" src="https://github.com/RRL-dev/uncertainty-in-models/blob/main/uim/assets/conditional_distribution_index.png?raw=true" alt="Conditional Distribution Index"></p>
 
+
+<p align="center">This plot visualizes the conditional distribution $( p(x_2, x_3, x_4, x_5 \mid x_1) )$ given a sampled value for $( x_1 )$. The left plot shows the bivariate distribution of $( x_1 )$ and $( x_5 )$ with the sampled point highlighted in red. The right plot shows the values of the sampled point as a function of their variable indices, with $( x_1 )$ highlighted as a red point.</p>
+
+
+<h2 align="center">Usage</h2>
+<p align="center">To run the script and visualize the distributions, simply execute the Python scripts located in the `scripts` folder:</p>
+
