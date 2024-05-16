@@ -13,11 +13,11 @@ The repository includes:
 - Sampled points from these distributions and their representation as functions of variable indices.
 
 
-## Mathematical Background
+<h2 align="center">Mathematical Background</h2>
 
-### Gaussian Distribution
+<h3 align="center">Gaussian Distribution</h3>
 
-A multivariate Gaussian distribution is defined by its mean vector $\( \boldsymbol{\mu} \)$ and covariance matrix $\( \boldsymbol{\Sigma} \)$. The probability density function (PDF) is given by:
+<p align="center">A multivariate Gaussian distribution is defined by its mean vector \( \boldsymbol{\mu} \) and covariance matrix \( \boldsymbol{\Sigma} \). The probability density function (PDF) is given by:</p>
 
 
 $$
