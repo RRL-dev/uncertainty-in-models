@@ -26,7 +26,7 @@ $$
 
 <h3 align="center">Conditional Distribution</h3>
 
-<p align="center">Given a multivariate normal distribution $( \mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}) )$, we can partition $( \mathbf{x} \), \( \boldsymbol{\mu} )$, and $( \boldsymbol{\Sigma} )$ as follows:</p>
+<p align="center">Given a multivariate normal distribution $( \mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}) )$, we can partition $( \mathbf{x} ), ( \boldsymbol{\mu} )$, and $( \boldsymbol{\Sigma} )$ as follows:</p>
 
 
 ```math
@@ -48,3 +48,6 @@ $$
 <p align="center">The conditional distribution of \( \mathbf{x}_a \) given \( \mathbf{x}_b = \mathbf{b} \) is:</p>
 <p align="center">
 
+```math
+\mathbf{x}_a \mid \mathbf{x}_b = \mathbf{b} \sim \mathcal{N}(\boldsymbol{\mu}_{a \mid b}, \boldsymbol{\Sigma}_{a \mid b})
+```
