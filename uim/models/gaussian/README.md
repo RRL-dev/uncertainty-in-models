@@ -22,9 +22,7 @@ A multivariate Gaussian distribution is defined by its mean vector $\( \boldsymb
 
 
 $$
-
 f(\mathbf{x}) = \frac{1}{(2\pi)^{k/2} |\boldsymbol{\Sigma}|^{1/2}} \exp \left( -\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^T \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu}) \right)
-
 $$
 
 
@@ -87,7 +85,6 @@ $$
 
 
 ### 2D Gaussian Distribution
-
 
 This plot visualizes a 2D Gaussian distribution along with a sampled point. The sampled point is highlighted in red, and the values are shown as functions of their variable indices.
 
