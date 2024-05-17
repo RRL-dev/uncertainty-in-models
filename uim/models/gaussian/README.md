@@ -16,7 +16,7 @@
 
 <h3 align="center">Gaussian Distribution</h3>
 
-<p align="center">A multivariate Gaussian distribution is defined by its mean vector \( \boldsymbol{\mu} \) and covariance matrix \( \boldsymbol{\Sigma} \). The probability density function (PDF) is given by:</p>
+<p align="center">A multivariate Gaussian distribution is defined by its mean vector $( \boldsymbol{\mu} )$ and covariance matrix $( \boldsymbol{\Sigma} )$. The probability density function (PDF) is given by:</p>
 
 <p align="center">
 $$
@@ -60,7 +60,6 @@ $$
 ```math
 \boldsymbol{\Sigma}_{a \mid b} = \boldsymbol{\Sigma}_{aa} - \boldsymbol{\Sigma}_{ab} \boldsymbol{\Sigma}_{bb}^{-1} \boldsymbol{\Sigma}_{ba}
 ```
-
 
 </p>
 <h2 align="center">Visualizations</h2>
