@@ -18,39 +18,39 @@ Ensure you have Python 3.10 or higher installed on your system. You can download
 
 ### Installation
 1. **Clone the repository:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/RRL-dev/uncertainty-in-models
    cd uncertainty-in-models
-   \`\`\`
+   ```
 
 2. **Setup a virtual environment** (optional, but recommended):
-   \`\`\`bash
+   ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\\Scripts\\activate`
-   \`\`\`
+   ```
 
 3. **Install the project package:**
-   \`\`\`bash
+   ```bash
    pip install -e .
-   \`\`\`
+   ```
 
 ### Usage
 To train the model, execute the following command:
-\`\`\`python
+```python
 from uim.models import BaseTrainer
 from uim.utils import DATASET_CFG, MODEL_CFG
 
 BaseTrainer(model_cfg=MODEL_CFG, data_cfg=DATASET_CFG).fit()
-\`\`\`
+```
 
 To run the model, execute the following command:
-\`\`\`python
+```python
 from uim.models import BasePredictor
 from uim.utils import MODEL_CFG
 
 predictor = BasePredictor(model_cfg=MODEL_CFG)
 score = predictor.predict_proba(X=predictor.samples)
-\`\`\`
+```
 
 ## Documentation
 - **BaseTrainer:** Handles the training of the model.
@@ -132,7 +132,7 @@ Based on the membership degrees, you could have rules like:
 - If **Medium Risk > 0.5** then send promotional offers.
 - If **Low Risk > 0.5** then maintain normal engagement.
 
-\`\`\`python
+```python
 # Dummy Python import for risk score calculation
 
 from uim.modules import BaseRiskScore
@@ -141,4 +141,4 @@ risk_score_calculator = BaseRiskScore()
 
 single_risk = risk_score_calculator.fit(probabilities=0.55)
 batch_risk = risk_score_calculator.fit(probabilities=np.array([0.2, 0.4, 0.6, 0.8]))
-\`\`\`
+```
