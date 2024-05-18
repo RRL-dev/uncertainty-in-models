@@ -2,6 +2,9 @@
   <img src="uim/assets/logo.png" alt="uim" width="200" style="border-radius: 50%;">
 </div>
 
+<a href="url"><img src="uim/assets/logo.png" height="auto" width="200" style="border-radius:50%">
+</a>
+
 # Uncertainty in Machine Learning Models
 
 ## Introduction
