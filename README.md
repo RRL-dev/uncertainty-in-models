@@ -103,7 +103,7 @@ This class encapsulates the training process of a model with configuration loade
 ## Risk Score Explanation and Methodology
 
 <div align="center">
-  <img src="uim/assets/risk_curve-modified.png" alt="Model Calibration Curves" width="400">
+  <img src="uim/assets/risk_curve-modified.png" alt="Model Calibration Curves" width="600">
 </div>
 
 ### Define Fuzzy Sets and Membership Functions
