@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="uim/assets/logo.png" alt="uim" width="200" height="auto" style="border-radius: 50%;">
+  <img src="uim/assets/logo.png" alt="uim" width="200" height="auto">
 </div>
 
 
