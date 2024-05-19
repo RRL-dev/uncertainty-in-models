@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="uim/assets/logo-modified.png" alt="uim" width="400" height="auto">
+  <img src="uim/assets/logo.png" alt="uim" width="400" height="auto">
 </div>
 
 
@@ -73,7 +73,7 @@ Project Link: [https://github.com/RRL-dev/uncertainty-in-models](https://github.
 This class integrates a classifier with a calibration mechanism using logistic regression to provide calibrated probability estimates.
 
 <div align="center">
-  <img src="uim/assets/reliability-modified.png" alt="Reliability Diagram" width="400">
+  <img src="uim/assets/reliability.png" alt="Reliability Diagram" width="400">
 </div>
 
 #### Methods
@@ -103,7 +103,7 @@ This class encapsulates the training process of a model with configuration loade
 ## Risk Score Explanation and Methodology
 
 <div align="center">
-  <img src="uim/assets/risk_curve-modified.png" alt="Model Calibration Curves" width="600">
+  <img src="uim/assets/risk_curve.png" alt="Model Calibration Curves" width="600">
 </div>
 
 ### Define Fuzzy Sets and Membership Functions
