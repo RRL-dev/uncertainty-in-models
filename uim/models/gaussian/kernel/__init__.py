@@ -1,3 +1,3 @@
-from .kernel import rbf_kernel
+from .rbf import rbf_kernel
 
 __all__: list[str] = ["rbf_kernel"]

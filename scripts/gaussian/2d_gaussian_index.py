@@ -1,3 +1,5 @@
+"""Plot of index dimension of 2d gaussian."""  # noqa: N999
+
 from __future__ import annotations
 
 from typing import TYPE_CHECKING

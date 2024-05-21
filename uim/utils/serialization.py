@@ -1,26 +1,35 @@
 """Basic functionality for serialization."""
 
-from typing import Any
+from pathlib import Path
 
 from yaml import safe_load
 
 from uim.utils.path import suffix
 
 
-def load_yaml(file_path: str) -> Any | dict[Any, Any]:
-    """
-    Load_yaml as simple method to load a yaml file.
+def load_yaml(file_path: str) -> dict | list:
+    """Load a YAML file.
 
     Args:
-        file (str): File path of yaml file.
+    ----
+        file_path (str): File path of the YAML file.
 
     Returns:
-        Any | dict[Any, Any]: Dictionary of yaml file structure.
+    -------
+        Union[dict, list]: Parsed content of the YAML file.
+
+    Raises:
+    ------
+        AssertionError: If the file is not a YAML file.
+
     """
-    assert suffix(name=file_path) == ".yaml", f"file {file_path} is not a yaml file"
+    if suffix(name=file_path) != ".yaml":
+        msg: str = f"file {file_path} is not a yaml file"
+        raise ValueError(msg)
 
-    with open(file=file_path, encoding="utf-8") as obj:
-        file: str = obj.read()
+    path = Path(file_path)
+    with path.open(encoding="utf-8") as obj:
+        file_content: str = obj.read()
 
-    data: Any | dict[Any, Any] = safe_load(stream=file) or {}
+    data: dict | list = safe_load(stream=file_content) or {}
     return data

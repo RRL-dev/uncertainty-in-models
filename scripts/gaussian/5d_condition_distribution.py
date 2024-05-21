@@ -1,3 +1,5 @@
+"""Plot of condition gaussian distribution."""  # noqa: N999
+
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
@@ -62,7 +64,9 @@ def plot_conditional_distribution() -> None:
     # Create a range of x_1 values
     x1_range: NDArray[np.float64] = np.linspace(start=-3, stop=3, num=100)
     conditional_pdf: NDArray[np.float64] = multivariate_normal.pdf(
-        x=x1_range, mean=mean_a_given_b, cov=sigma_a_given_b, # type: ignore  # noqa: PGH003
+        x=x1_range,
+        mean=mean_a_given_b,
+        cov=sigma_a_given_b,  # type: ignore  # noqa: PGH003
     )
 
     # Create the plot
@@ -78,11 +82,15 @@ def plot_conditional_distribution() -> None:
     sigma_sub: NDArray[np.float64] = sigma[[0, 4], :][:, [0, 4]]
     mean_sub: NDArray[np.float64] = mean[[0, 4]]
 
-    rv: multivariate_normal_frozen = multivariate_normal(mean=mean_sub, cov=sigma_sub) # type: ignore  # noqa: PGH003
+    rv: multivariate_normal_frozen = multivariate_normal(mean=mean_sub, cov=sigma_sub)  # type: ignore  # noqa: PGH003
     pdf_values: NDArray[np.float64] = rv.pdf(position)
 
     contour: QuadContourSet = ax[0].contourf(
-        y1, y5, pdf_values, cmap="viridis", alpha=0.7,
+        y1,
+        y5,
+        pdf_values,
+        cmap="viridis",
+        alpha=0.7,
     )
 
     ax[0].set_xlabel("$x_1$", fontsize=14)
@@ -91,14 +99,10 @@ def plot_conditional_distribution() -> None:
     ax[0].set_xlim([-3, 3])
     ax[0].set_ylim([-3, 3])
     ax[0].legend(loc="upper right", fontsize=12)
-    fig.colorbar(
-        mappable=contour, ax=ax[0], orientation="vertical", label="Probability Density"
-    )
+    fig.colorbar(mappable=contour, ax=ax[0], orientation="vertical", label="Probability Density")
 
     # Plot the conditional distribution
-    ax[1].plot(
-        x1_range, conditional_pdf, "b-", lw=2, label="$p(x_1 | x_2, x_3, x_4, x_5)$"
-    )
+    ax[1].plot(x1_range, conditional_pdf, "b-", lw=2, label="$p(x_1 | x_2, x_3, x_4, x_5)$")
 
     ax[1].set_xlabel("$x_1$", fontsize=14)
     ax[1].set_ylabel("Density", fontsize=14)

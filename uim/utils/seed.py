@@ -16,12 +16,13 @@ logger: Logger = getLogger(name=__name__)
 
 
 def set_global_seed(seed: int) -> None:
-    """
-    Set seed to enable reproducible result.
+    """Set seed to enable reproducible results.
 
     Args:
-        seed (int): Number of randomness block.
+    ----
+        seed (int): Number to set the randomness block.
+
     """
     rnd_seed(a=seed)
     environ["PYTHONHASHSEED"] = str(object=seed)
-    random.seed(seed=seed)
+    random.seed(seed=seed)  # noqa: NPY002

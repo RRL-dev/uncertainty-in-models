@@ -1,3 +1,5 @@
+"""Plot of 2d rbd prior dimension of 2d gaussian."""  # noqa: N999
+
 from __future__ import annotations
 
 from typing import Any
@@ -39,8 +41,8 @@ def plot_gp_prior_samples(  # noqa: PLR0913
 
     # Compute the covariance matrix using the RBF kernel
     covariance: np.ndarray[Any, np.dtype[np.floating[Any]]] = rbf_kernel(
-        X1=x_points,
-        X2=x_points,
+        x1=x_points,
+        x2=x_points,
         variance=variance,
         length_scale=length_scale,
     )

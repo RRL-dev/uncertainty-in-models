@@ -1,3 +1,5 @@
+"""Plot of index dimension of 5d condition gaussian."""  # noqa: N999
+
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
@@ -89,7 +91,7 @@ def plot_conditional_index() -> None:
     sigma_sub: NDArray[np.float64] = sigma[[0, 4], :][:, [0, 4]]
     mean_sub: NDArray[np.float64] = mean[[0, 4]]
 
-    rv: multivariate_normal_frozen = multivariate_normal(mean=mean_sub, cov=sigma_sub) # type: ignore  # noqa: PGH003
+    rv: multivariate_normal_frozen = multivariate_normal(mean=mean_sub, cov=sigma_sub)  # type: ignore  # noqa: PGH003
 
     pdf_values: NDArray[np.float64] = rv.pdf(x=position)
     contour: QuadContourSet = ax[0].contourf(y1, y5, pdf_values, cmap="viridis", alpha=0.7)
